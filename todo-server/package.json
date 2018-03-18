@@ -1,0 +1,26 @@
+{
+  "name": "todo-server",
+  "version": "1.0.0",
+  "description": "Backend server for react-native todo-list app",
+  "main": "starter.js",
+  "scripts": {
+    "start": "node starter.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Manrique",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "md5": "^2.2.1",
+    "nedb": "^1.8.0",
+    "uuid-token-generator": "^1.0.0",
+    "validator": "^9.4.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0"
+  }
+}

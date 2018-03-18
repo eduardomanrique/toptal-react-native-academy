@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const authConfig = require('./src/config/auth-config');
-const session = require('express-session')
-const cookieParser = require('cookie-parser')
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const fileUpload = require('express-fileupload');
 
 const app = express();
 app.use(cookieParser('todolist'));
@@ -12,6 +13,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
+app.use(fileUpload());
 
 app.get('/', (req, res) => res.json({
     "message": "Welcome to TODO-LIST server app for Toptal React Academy."

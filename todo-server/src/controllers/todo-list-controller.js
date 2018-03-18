@@ -42,7 +42,7 @@ router.delete('/file/', passport.authenticationMiddleware(), async (req, res) =>
 });
 
 router.get('/list', passport.authenticationMiddleware(), async (req, res) => {
-    const list = await TodoList.search(req.params.name);
+    const list = await TodoList.search(req.query.name);
     res.json(list);
 });
 
